@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer utilities {
+    .scrollbar::-webkit-scrollbar {
+      width: 8px;
+    }
+  
+    .scrollbar::-webkit-scrollbar-track {
+      @apply bg-gray-100 dark:bg-gray-800;
+    }
+  
+    .scrollbar::-webkit-scrollbar-thumb {
+      @apply bg-gray-300 dark:bg-gray-600 rounded-full;
+    }
+  }
+
+  @keyframes bounce-horizontal {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(5px); }
+  }
+  
+  .animate-bounce-horizontal {
+    animation: bounce-horizontal 1s infinite;
+  }
+/* Add to your global CSS */
+@layer base {
+    :root {
+      --color-primary: 37 99 235;
+    }
+    
+    body {
+      @apply antialiased bg-white dark:bg-gray-900 transition-colors duration-300;
+    }
+  }

@@ -1,0 +1,220 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "title": "Data Science Mastery",
+      "slug": "data-science-mastery",
+      "shortDescription": "Master data analysis, machine learning, and data visualization",
+      "category": "Data Science",
+      "featured": true,
+      "rating": 4.7,
+      "duration": "10 weeks",
+      "instructor": "Emily Johnson",
+      "image": "/images/data-science.jpg",
+      "price": 349.99,
+      "enrollment": 1200,
+      "description": "An end-to-end course covering data cleaning, visualization, machine learning, and real-world datasets.",
+      "syllabus": [
+        {
+          "week": 1,
+          "topic": "Data Basics",
+          "content": ["Data Types", "Introduction to Pandas", "Exploratory Data Analysis"]
+        },
+        {
+          "week": 2,
+          "topic": "Visualization Techniques",
+          "content": ["Matplotlib & Seaborn", "Dashboarding", "Storytelling with Data"]
+        }
+      ],
+      "prerequisites": ["Basic math", "Familiarity with Excel or spreadsheets"],
+      "reviews": [
+        {
+          "user": "Rahul Verma",
+          "rating": 4.5,
+          "comment": "Loved the depth and clarity in explanations!",
+          "date": "2024-04-10"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "UI/UX Design Essentials",
+      "slug": "ui-ux-design-essentials",
+      "shortDescription": "Design intuitive user interfaces and seamless experiences",
+      "category": "Design",
+      "featured": true,
+      "rating": 4.6,
+      "duration": "8 weeks",
+      "instructor": "Laura Kim",
+      "image": "/images/ui-ux.jpg",
+      "price": 199.99,
+      "enrollment": 980,
+      "description": "Learn how to design user-centric interfaces using Figma, prototyping, and usability testing techniques.",
+      "syllabus": [
+        {
+          "week": 1,
+          "topic": "Design Fundamentals",
+          "content": ["Design Principles", "Typography & Color", "Layout Techniques"]
+        },
+        {
+          "week": 2,
+          "topic": "Tools of the Trade",
+          "content": ["Figma Basics", "Wireframing", "Low-Fidelity Prototypes"]
+        }
+      ],
+      "prerequisites": ["Creative thinking", "Basic knowledge of design tools helpful"],
+      "reviews": [
+        {
+          "user": "Sneha Mehta",
+          "rating": 5,
+          "comment": "Super beginner-friendly and practical. Loved it!",
+          "date": "2024-02-28"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Python for Automation",
+      "slug": "python-for-automation",
+      "shortDescription": "Automate boring tasks with Python scripting",
+      "category": "Programming",
+      "featured": true,
+      "rating": 4.9,
+      "duration": "6 weeks",
+      "instructor": "Mark Lee",
+      "image": "/images/python-automation.jpg",
+      "price": 149.99,
+      "enrollment": 2100,
+      "description": "Boost your productivity by automating spreadsheets, emails, file systems, and more using Python.",
+      "syllabus": [
+        {
+          "week": 1,
+          "topic": "Python Refresher",
+          "content": ["Syntax Basics", "Loops & Conditions", "Working with Files"]
+        },
+        {
+          "week": 2,
+          "topic": "Automation Projects",
+          "content": ["Automate Excel", "Email Bot", "Web Scraping with BeautifulSoup"]
+        }
+      ],
+      "prerequisites": ["Basic Python knowledge"],
+      "reviews": [
+        {
+          "user": "Naveen Rao",
+          "rating": 4.9,
+          "comment": "Helped me automate my office work easily!",
+          "date": "2024-01-21"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Digital Marketing Strategy",
+      "slug": "digital-marketing-strategy",
+      "shortDescription": "Master online marketing strategies and tools",
+      "category": "Marketing",
+      "featured": true,
+      "rating": 4.5,
+      "duration": "7 weeks",
+      "instructor": "Priya Desai",
+      "image": "/images/marketing.jpg",
+      "price": 189.99,
+      "enrollment": 1100,
+      "description": "Understand SEO, SEM, content marketing, and analytics for building powerful campaigns.",
+      "syllabus": [
+        {
+          "week": 1,
+          "topic": "Marketing Basics",
+          "content": ["Digital vs Traditional", "Marketing Funnels", "Customer Journey"]
+        },
+        {
+          "week": 2,
+          "topic": "SEO Deep Dive",
+          "content": ["On-page SEO", "Keyword Research", "Google Analytics"]
+        }
+      ],
+      "prerequisites": ["Basic computer skills"],
+      "reviews": [
+        {
+          "user": "Anjali Kapoor",
+          "rating": 4.6,
+          "comment": "Good structure and relevant case studies.",
+          "date": "2024-03-05"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Mobile App Development with Flutter",
+      "slug": "flutter-app-development",
+      "shortDescription": "Create beautiful cross-platform apps with Flutter and Dart",
+      "category": "Mobile Development",
+      "featured": true,
+      "rating": 4.8,
+      "duration": "9 weeks",
+      "instructor": "David Zhang",
+      "image": "/images/flutter.jpg",
+      "price": 279.99,
+      "enrollment": 1700,
+      "description": "Build real-world mobile apps using Flutter framework with interactive UI and Firebase integration.",
+      "syllabus": [
+        {
+          "week": 1,
+          "topic": "Flutter Basics",
+          "content": ["Dart Overview", "Widgets", "Layouts"]
+        },
+        {
+          "week": 2,
+          "topic": "Navigation & State",
+          "content": ["Routes", "State Management", "Provider Package"]
+        }
+      ],
+      "prerequisites": ["Basic programming knowledge", "No app development experience needed"],
+      "reviews": [
+        {
+          "user": "Mohammed Faiz",
+          "rating": 5,
+          "comment": "Super interactive and project-based. Highly recommended!",
+          "date": "2024-03-22"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Ethical Hacking & Cybersecurity",
+      "slug": "ethical-hacking-cybersecurity",
+      "shortDescription": "Explore the world of ethical hacking and learn how to secure systems",
+      "category": "Cybersecurity",
+      "featured": true,
+      "rating": 4.7,
+      "duration": "10 weeks",
+      "instructor": "Ankit Sharma",
+      "image": "/images/hacking.jpg",
+      "price": 329.99,
+      "enrollment": 1350,
+      "description": "Learn network scanning, penetration testing, and best practices in cybersecurity.",
+      "syllabus": [
+        {
+          "week": 1,
+          "topic": "Cybersecurity Foundations",
+          "content": ["Security Principles", "Types of Attacks", "Linux for Hackers"]
+        },
+        {
+          "week": 2,
+          "topic": "Ethical Hacking Tools",
+          "content": ["Nmap", "Wireshark", "Metasploit Basics"]
+        }
+      ],
+      "prerequisites": ["Computer basics", "Interest in security"],
+      "reviews": [
+        {
+          "user": "Karan Singh",
+          "rating": 4.8,
+          "comment": "Tons of hands-on labs and real scenarios!",
+          "date": "2024-04-01"
+        }
+      ]
+    }
+  ]
+}
