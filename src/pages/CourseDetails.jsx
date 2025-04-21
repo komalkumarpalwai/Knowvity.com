@@ -1,3 +1,4 @@
+// [UNCHANGED IMPORTS]
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import coursesData from '../data/CoursesData.json';
@@ -13,11 +14,11 @@ const CourseDetails = () => {
       <div className="flex flex-col min-h-screen">
         <main className="flex-grow flex items-center justify-center">
           <div className="text-center">
-            <h1 className="text-2xl font-bold text-gray-800">Course not found</h1>
-            <p className="text-gray-600 mt-2">The course you're looking for doesn't exist.</p>
+            <h1 className="text-2xl font-bold text-[#353535]">Course not found</h1>
+            <p className="text-[#6A7B6D] mt-2">The course you're looking for doesn't exist.</p>
             <button 
               onClick={() => navigate('/courses')}
-              className="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg"
+              className="mt-4 bg-[#3EC1C9] text-white px-4 py-2 rounded-lg"
             >
               Back to Courses
             </button>
@@ -44,7 +45,7 @@ const CourseDetails = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <button 
           onClick={() => navigate(-1)}
-          className="flex items-center text-blue-600 mb-6"
+          className="flex items-center text-[#3EC1C9] mb-6"
         >
           <FaArrowLeft className="mr-2" /> Back to Courses
         </button>
@@ -60,35 +61,35 @@ const CourseDetails = () => {
               />
             </div>
             <div className="p-8 md:w-1/2">
-              <div className="uppercase tracking-wide text-sm text-blue-600 font-semibold mb-1">
+              <div className="uppercase tracking-wide text-sm text-[#3EC1C9] font-semibold mb-1">
                 {course.category}
               </div>
-              <h1 className="text-3xl font-bold text-gray-900 mb-4">{course.title}</h1>
-              <p className="text-gray-600 mb-6">{course.shortDescription}</p>
+              <h1 className="text-3xl font-bold text-[#353535] mb-4">{course.title}</h1>
+              <p className="text-[#6A7B6D] mb-6">{course.shortDescription}</p>
               
               <div className="flex items-center mb-6">
                 <div className="flex mr-4">
                   {renderStars(course.rating)}
                 </div>
-                <span className="text-gray-700 font-medium">
+                <span className="text-[#6A7B6D] font-medium">
                   {course.rating} ({course.enrollment} students)
                 </span>
               </div>
 
               <div className="flex flex-wrap gap-4 mb-6">
-                <div className="flex items-center text-gray-700">
-                  <FaClock className="mr-2 text-blue-500" />
+                <div className="flex items-center text-[#6A7B6D]">
+                  <FaClock className="mr-2 text-[#3EC1C9]" />
                   <span>{course.duration}</span>
                 </div>
-                <div className="flex items-center text-gray-700">
-                  <FaUserTie className="mr-2 text-blue-500" />
+                <div className="flex items-center text-[#6A7B6D]">
+                  <FaUserTie className="mr-2 text-[#3EC1C9]" />
                   <span>{course.instructor}</span>
                 </div>
               </div>
 
               <div className="mb-8">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">${course.price}</h3>
-                <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center transition-colors">
+                <h3 className="text-xl font-bold text-[#353535] mb-2">${course.price}</h3>
+                <button className="w-full bg-[#3EC1C9] hover:bg-[#34acb4] text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center transition-colors">
                   <FaShoppingCart className="mr-2" />
                   Purchase Now
                 </button>
@@ -102,15 +103,15 @@ const CourseDetails = () => {
           <div className="lg:col-span-2">
             {/* Course Description */}
             <div className="bg-white rounded-xl shadow-md p-8 mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">About This Course</h2>
-              <p className="text-gray-700 mb-6">{course.description}</p>
+              <h2 className="text-2xl font-bold text-[#353535] mb-6">About This Course</h2>
+              <p className="text-[#6A7B6D] mb-6">{course.description}</p>
               
-              <h3 className="text-xl font-bold text-gray-900 mb-4">What You'll Learn</h3>
+              <h3 className="text-xl font-bold text-[#353535] mb-4">What You'll Learn</h3>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {course.syllabus.slice(0, 8).flatMap(week => week.content).map((item, index) => (
                   <li key={index} className="flex items-start">
-                    <FaCheck className="text-green-500 mt-1 mr-2 flex-shrink-0" />
-                    <span className="text-gray-700">{item}</span>
+                    <FaCheck className="text-[#3EC1C9] mt-1 mr-2 flex-shrink-0" />
+                    <span className="text-[#6A7B6D]">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -118,17 +119,17 @@ const CourseDetails = () => {
 
             {/* Syllabus */}
             <div className="bg-white rounded-xl shadow-md p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Course Syllabus</h2>
+              <h2 className="text-2xl font-bold text-[#353535] mb-6">Course Syllabus</h2>
               <div className="space-y-6">
                 {course.syllabus.map((week) => (
                   <div key={week.week} className="border-b border-gray-200 pb-6 last:border-0">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                    <h3 className="text-xl font-semibold text-[#353535] mb-3">
                       Week {week.week}: {week.topic}
                     </h3>
                     <ul className="space-y-2">
                       {week.content.map((item, index) => (
-                        <li key={index} className="text-gray-700 flex items-start">
-                          <FaCheck className="text-green-500 mt-1 mr-2 flex-shrink-0" />
+                        <li key={index} className="text-[#6A7B6D] flex items-start">
+                          <FaCheck className="text-[#3EC1C9] mt-1 mr-2 flex-shrink-0" />
                           <span>{item}</span>
                         </li>
                       ))}
@@ -143,11 +144,11 @@ const CourseDetails = () => {
           <div className="space-y-6">
             {/* Prerequisites */}
             <div className="bg-white rounded-xl shadow-md p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Requirements</h3>
+              <h3 className="text-xl font-bold text-[#353535] mb-4">Requirements</h3>
               <ul className="space-y-2">
                 {course.prerequisites.map((item, index) => (
-                  <li key={index} className="text-gray-700 flex items-start">
-                    <FaCheck className="text-green-500 mt-1 mr-2 flex-shrink-0" />
+                  <li key={index} className="text-[#6A7B6D] flex items-start">
+                    <FaCheck className="text-[#3EC1C9] mt-1 mr-2 flex-shrink-0" />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -156,19 +157,19 @@ const CourseDetails = () => {
 
             {/* Reviews */}
             <div className="bg-white rounded-xl shadow-md p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Student Reviews</h3>
+              <h3 className="text-xl font-bold text-[#353535] mb-4">Student Reviews</h3>
               <div className="space-y-4">
                 {course.reviews.map((review, index) => (
                   <div key={index} className="border-b border-gray-100 pb-4 last:border-0">
                     <div className="flex justify-between items-start mb-2">
-                      <h4 className="font-medium text-gray-900">{review.user}</h4>
+                      <h4 className="font-medium text-[#353535]">{review.user}</h4>
                       <div className="flex text-yellow-400">
                         {Array.from({ length: 5 }).map((_, i) => (
                           i < review.rating ? <FaStar key={i} /> : <FaRegStar key={i} />
                         ))}
                       </div>
                     </div>
-                    <p className="text-gray-600 text-sm">{review.comment}</p>
+                    <p className="text-[#6A7B6D] text-sm">{review.comment}</p>
                     <p className="text-gray-400 text-xs mt-2">{review.date}</p>
                   </div>
                 ))}

@@ -33,3 +33,13 @@
       @apply antialiased bg-white dark:bg-gray-900 transition-colors duration-300;
     }
   }
+  @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Enable dark mode */
+@layer base {
+  html {
+    color-scheme: light dark;
+  }
+}

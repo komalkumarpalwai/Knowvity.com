@@ -23,33 +23,33 @@ const CoursesPage = () => {
   };
 
   return (
-    <div className="py-12 bg-gray-50">
+    <div className="py-12 bg-[#F8FAF9]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Courses</h1>
-          <p className="text-xl text-gray-600">Find the perfect course to boost your career</p>
+          <h1 className="text-4xl font-bold text-[#353535] mb-4">Our Courses</h1>
+          <p className="text-xl text-[#6A7B6D]">Find the perfect course to boost your career</p>
         </div>
 
         <div className="mb-12">
           <div className="flex flex-col md:flex-row gap-4 mb-6">
             <div className="relative flex-grow">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <FiSearch className="h-5 w-5 text-gray-400" />
+                <FiSearch className="h-5 w-5 text-[#6A7B6D]" />
               </div>
               <input
                 type="text"
                 placeholder="Search courses..."
-                className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-[#3EC1C9] focus:border-transparent"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
             </div>
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <FiFilter className="h-5 w-5 text-gray-400" />
+                <FiFilter className="h-5 w-5 text-[#6A7B6D]" />
               </div>
               <select
-                className="appearance-none block pl-10 pr-10 py-3 border border-gray-300 rounded-lg bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="appearance-none block pl-10 pr-10 py-3 border border-gray-300 rounded-lg bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-[#3EC1C9] focus:border-transparent"
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
               >
@@ -80,7 +80,7 @@ const CoursesPage = () => {
                 />
                 <div className="p-6">
                   <div className="flex justify-between items-start mb-2">
-                    <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">
+                    <span className="inline-block px-3 py-1 bg-[#3EC1C9]/20 text-[#3EC1C9] text-xs font-medium rounded-full">
                       {course.category}
                     </span>
                     <span className="flex items-center text-yellow-500">
@@ -88,11 +88,11 @@ const CoursesPage = () => {
                       <span> ★</span>
                     </span>
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{course.title}</h3>
-                  <p className="text-gray-600 text-sm mb-4">{course.shortDescription}</p>
+                  <h3 className="text-xl font-semibold text-[#353535] mb-2">{course.title}</h3>
+                  <p className="text-[#6A7B6D] text-sm mb-4">{course.shortDescription}</p>
                   <div className="flex justify-between items-center">
-                    <span className="text-lg font-bold text-gray-900">${course.price}</span>
-                    <span className="text-sm text-gray-500">{course.duration}</span>
+                    <span className="text-lg font-bold text-[#353535]">${course.price}</span>
+                    <span className="text-sm text-[#6A7B6D]">{course.duration}</span>
                   </div>
                 </div>
               </div>
@@ -102,8 +102,8 @@ const CoursesPage = () => {
 
         {filteredCourses.length === 0 && (
           <div className="text-center py-12">
-            <h3 className="text-xl font-medium text-gray-700">No courses found</h3>
-            <p className="text-gray-500 mt-2">Try adjusting your search or filter</p>
+            <h3 className="text-xl font-medium text-[#6A7B6D]">No courses found</h3>
+            <p className="text-[#353535] mt-2">Try adjusting your search or filter</p>
           </div>
         )}
       </div>

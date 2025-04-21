@@ -14,7 +14,7 @@ const blogPosts = [
     date: '2023-05-15',
     readTime: '8 min read',
     category: 'React',
-    image: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'
+    image: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80'
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const blogPosts = [
     date: '2023-04-22',
     readTime: '10 min read',
     category: 'JavaScript',
-    image: 'https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'
+    image: 'https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80'
   },
   {
     id: 3,
@@ -34,7 +34,7 @@ const blogPosts = [
     date: '2023-03-10',
     readTime: '12 min read',
     category: 'CSS',
-    image: 'https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'
+    image: 'https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80'
   },
   {
     id: 4,
@@ -44,7 +44,7 @@ const blogPosts = [
     date: '2023-02-28',
     readTime: '15 min read',
     category: 'Node.js',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80'
   },
   {
     id: 5,
@@ -54,7 +54,7 @@ const blogPosts = [
     date: '2023-01-18',
     readTime: '9 min read',
     category: 'Python',
-    image: 'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80'
+    image: 'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1469&q=80'
   },
   {
     id: 6,
@@ -64,7 +64,7 @@ const blogPosts = [
     date: '2022-12-05',
     readTime: '11 min read',
     category: 'Web Development',
-    image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80'
+    image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1469&q=80'
   }
 ];
 
@@ -89,13 +89,13 @@ const BlogPage = () => {
   return (
     <div className="flex flex-col min-h-screen">
    
-      
-      <main className="flex-grow py-12 bg-gray-50">
+
+      <main className="flex-grow py-12 bg-[#F5F9F9]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Page Header */}
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Blog</h1>
-            <p className="text-xl text-gray-600">Learn from our expert developers and stay updated with the latest trends</p>
+            <h1 className="text-4xl font-bold text-[#353535] mb-4">Our Blog</h1>
+            <p className="text-xl text-[#6A7B6D]">Learn from our expert developers and stay updated with the latest trends</p>
           </div>
 
           {/* Search and Filter */}
@@ -105,14 +105,14 @@ const BlogPage = () => {
                 <input
                   type="text"
                   placeholder="Search blog posts..."
-                  className="block w-full pl-4 pr-3 py-3 border border-gray-300 rounded-lg bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="block w-full pl-4 pr-3 py-3 border border-gray-300 rounded-lg bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-[#3EC1C9] focus:border-transparent"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                 />
               </div>
               <div className="relative">
                 <select
-                  className="appearance-none block w-full pl-4 pr-10 py-3 border border-gray-300 rounded-lg bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="appearance-none block w-full pl-4 pr-10 py-3 border border-gray-300 rounded-lg bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-[#3EC1C9] focus:border-transparent"
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
                 >
@@ -143,17 +143,17 @@ const BlogPage = () => {
                 />
                 <div className="p-6">
                   <div className="flex justify-between items-start mb-2">
-                    <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">
+                    <span className="inline-block px-3 py-1 bg-[#3EC1C9]/20 text-[#3EC1C9] text-xs font-medium rounded-full">
                       {post.category}
                     </span>
-                    <div className="flex items-center text-gray-500 text-sm">
+                    <div className="flex items-center text-[#6A7B6D] text-sm">
                       <FiClock className="mr-1" />
                       <span>{post.readTime}</span>
                     </div>
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{post.title}</h3>
-                  <p className="text-gray-600 text-sm mb-4">{post.excerpt}</p>
-                  <div className="flex items-center justify-between text-sm text-gray-500">
+                  <h3 className="text-xl font-semibold text-[#353535] mb-2">{post.title}</h3>
+                  <p className="text-[#6A7B6D] text-sm mb-4">{post.excerpt}</p>
+                  <div className="flex items-center justify-between text-sm text-[#6A7B6D]">
                     <div className="flex items-center">
                       <FiUser className="mr-1" />
                       <span>{post.author}</span>
@@ -170,14 +170,14 @@ const BlogPage = () => {
 
           {filteredPosts.length === 0 && (
             <div className="text-center py-12">
-              <h3 className="text-xl font-medium text-gray-700">No blog posts found</h3>
-              <p className="text-gray-500 mt-2">Try adjusting your search or filter</p>
+              <h3 className="text-xl font-medium text-[#353535]">No blog posts found</h3>
+              <p className="text-[#6A7B6D] mt-2">Try adjusting your search or filter</p>
             </div>
           )}
         </div>
       </main>
 
-      <Footer />
+      
     </div>
   );
 };

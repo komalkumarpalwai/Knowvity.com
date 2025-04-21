@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaBars, FaTimes } from 'react-icons/fa'; // Importing icons from react-icons
+import { FaBars, FaTimes } from 'react-icons/fa';
 import React from 'react';
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [timer, setTimer] = useState({ days: 1, hours: 23, minutes: 59, seconds: 59 });
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false); // State for dark mode
 
   const navigation = [
     { name: 'Home', href: '/' },
@@ -14,6 +16,21 @@ const Header = () => {
     { name: 'Contact', href: '/contact' },
   ];
 
+  // Toggle dark mode
+  const toggleDarkMode = () => {
+    setIsDarkMode(prev => !prev);  // Toggle dark mode state
+  };
+
+  // Update body class for dark mode when state changes
+  useEffect(() => {
+    if (isDarkMode) {
+      document.body.classList.add('dark');
+    } else {
+      document.body.classList.remove('dark');
+    }
+  }, [isDarkMode]);
+
+  // Countdown timer logic
   useEffect(() => {
     const interval = setInterval(() => {
       setTimer(prev => {
@@ -29,6 +46,7 @@ const Header = () => {
     return () => clearInterval(interval);
   }, []);
 
+  // Scroll event handler
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
@@ -41,7 +59,7 @@ const Header = () => {
       <motion.div 
         initial={{ y: -50 }}
         animate={{ y: 0 }}
-        className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-4"
+        className="bg-[#3EC1C9] text-white py-3 px-4"
       >
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-4">
@@ -59,7 +77,7 @@ const Header = () => {
           <motion.a
             href="/courses"
             whileHover={{ scale: 1.05 }}
-            className="bg-white text-blue-600 px-6 py-2 rounded-full font-medium flex items-center gap-2 hover:shadow-lg"
+            className="bg-white text-[#3EC1C9] px-6 py-2 rounded-full font-medium flex items-center gap-2 hover:shadow-lg"
           >
             Enroll Now
             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -71,24 +89,19 @@ const Header = () => {
 
       {/* Navigation */}
       <nav className={`sticky top-0 z-50 transition-all ${isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm' : 'bg-transparent'}`}>
-        <div className="max-w-7xl mx-auto px-4 py-4">
+        <div className={`max-w-7xl mx-auto px-4 py-4 ${isDarkMode ? 'bg-gray-900/80' : ''}`}>
           <div className="flex justify-between items-center">
-            {/* Logo */}
             <motion.div 
               whileHover={{ scale: 1.05 }}
-              className="flex items-center gap-3"
+              className="flex items-center"
             >
-              <motion.svg
-                className="w-8 h-8 text-blue-600"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-              </motion.svg>
-      <a href="/">   <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Knowvity
-              </span></a>
+              <a href="/">
+                <img 
+                  src="/logo.jpg" 
+                  alt="Knowvity Logo" 
+                  className="w-28 h-28 object-contain" 
+                />
+              </a>
             </motion.div>
 
             {/* Desktop Nav */}
@@ -97,12 +110,21 @@ const Header = () => {
                 <motion.a
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 hover:text-blue-600 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-blue-600 hover:after:w-full after:transition-all"
+                  className="text-gray-700 hover:text-[#3EC1C9] relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-[#3EC1C9] hover:after:w-full after:transition-all"
                   whileHover={{ y: -2 }}
                 >
                   {item.name}
                 </motion.a>
               ))}
+
+              {/* Register Button */}
+              <motion.a
+                href="/register"
+                whileHover={{ scale: 1.05 }}
+                className="bg-[#3EC1C9] text-white px-4 py-2 rounded-full font-medium shadow hover:opacity-90 transition"
+              >
+                Register
+              </motion.a>
             </div>
 
             {/* Mobile Menu Button */}

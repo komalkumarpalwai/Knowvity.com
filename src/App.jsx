@@ -16,6 +16,7 @@ const Terms = lazy(() => import('./components/Terms'));
 const Blog = lazy(() => import('./pages/Blog'));
 const BlogPost = lazy(() => import('./pages/BlogPost'));
 const Faq =lazy (()=> import ('./components/Faq'))
+const Register = lazy (()=> import ('./pages/Register'))
 const App = () => {
   return (
     <Router>
@@ -34,6 +35,7 @@ const App = () => {
             <Route path="/faq" element={<Faq />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:id" element={<BlogPost />} />
+            <Route path="/register" element={<Register />} />
           </Routes>
         </Suspense>
       </main>
