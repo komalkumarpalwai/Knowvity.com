@@ -8,7 +8,7 @@ const Footer = () => {
       links: [
         { name: 'Home', href: '/' },
         { name: 'Courses', href: '/courses' },
-        { name: 'Pricing', href: '/pricing' },
+        { name: 'Pricing', href: '/courses' },
         { name: 'Blog', href: '/blog' },
       ],
     },
@@ -16,7 +16,7 @@ const Footer = () => {
       title: 'Support',
       links: [
         { name: 'FAQ', href: '/faq' },
-        { name: 'Help Center', href: '/support' },
+        { name: 'Help Center', href: '/contact' },
         { name: 'Terms of Service', href: '/terms' },
         { name: 'Privacy Policy', href: '/privacy' },
       ],
@@ -25,9 +25,9 @@ const Footer = () => {
       title: 'Company',
       links: [
         { name: 'About Us', href: '/about' },
-        { name: 'Careers', href: '/careers' },
+        { name: 'Careers', href: '/' },
         { name: 'Contact Us', href: '/contact' },
-        { name: 'Partnerships', href: '/partners' },
+        { name: 'Partnerships', href: '/' },
       ],
     },
   ];

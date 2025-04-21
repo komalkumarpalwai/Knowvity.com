@@ -4,7 +4,7 @@ import { FaBars, FaTimes } from 'react-icons/fa'; // Importing icons from react-
 import React from 'react';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [timer, setTimer] = useState({ days: 3, hours: 23, minutes: 59, seconds: 59 });
+  const [timer, setTimer] = useState({ days: 1, hours: 23, minutes: 59, seconds: 59 });
   const [isScrolled, setIsScrolled] = useState(false);
 
   const navigation = [
@@ -86,9 +86,9 @@ const Header = () => {
               >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
               </motion.svg>
-              <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+      <a href="/">   <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 Knowvity
-              </span>
+              </span></a>
             </motion.div>
 
             {/* Desktop Nav */}
