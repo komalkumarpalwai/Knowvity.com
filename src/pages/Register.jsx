@@ -22,16 +22,16 @@ const RegisterPage = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#353535] px-4">
+    <div className="min-h-screen flex items-center justify-center bg-[#121212] px-4">
       <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
+        initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="w-full max-w-md bg-white rounded-2xl shadow-xl p-8 space-y-6"
+        className="w-full max-w-md bg-white rounded-2xl shadow-2xl p-8 space-y-6"
       >
-        <h2 className="text-3xl font-bold text-center text-[#3EC1C9]">
+        <h2 className="text-3xl font-bold text-center text-[#813BEA]">
           {isLogin ? "Welcome Back" : "Create Account"}
         </h2>
-        <p className="text-center text-[#6A7B6D]">
+        <p className="text-center text-gray-600">
           {isLogin
             ? "Login to your premium account"
             : "Join us for a premium experience"}
@@ -40,7 +40,7 @@ const RegisterPage = () => {
         <form className="space-y-4" onSubmit={handleSubmit}>
           {!isLogin && (
             <div>
-              <label className="block text-sm font-medium text-[#6A7B6D]">
+              <label className="block text-sm font-medium text-gray-700">
                 Full Name
               </label>
               <input
@@ -49,12 +49,12 @@ const RegisterPage = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-[#3EC1C9] focus:border-[#3EC1C9] outline-none"
+                className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-[#2A60EB] focus:border-[#2A60EB] outline-none"
               />
             </div>
           )}
           <div>
-            <label className="block text-sm font-medium text-[#6A7B6D]">
+            <label className="block text-sm font-medium text-gray-700">
               Email
             </label>
             <input
@@ -63,11 +63,11 @@ const RegisterPage = () => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-[#3EC1C9] focus:border-[#3EC1C9] outline-none"
+              className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-[#2A60EB] focus:border-[#2A60EB] outline-none"
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-[#6A7B6D]">
+            <label className="block text-sm font-medium text-gray-700">
               Password
             </label>
             <input
@@ -76,22 +76,22 @@ const RegisterPage = () => {
               value={formData.password}
               onChange={handleChange}
               required
-              className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-[#3EC1C9] focus:border-[#3EC1C9] outline-none"
+              className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-[#2A60EB] focus:border-[#2A60EB] outline-none"
             />
           </div>
 
           <button
             type="submit"
-            className="w-full py-2 px-4 bg-[#3EC1C9] hover:bg-[#6A7B6D] text-white font-semibold rounded-lg transition duration-200"
+            className="w-full py-2 px-4 bg-[#813BEA] hover:bg-[#2A60EB] text-white font-semibold rounded-lg transition duration-200"
           >
             {isLogin ? "Login" : "Sign Up"}
           </button>
         </form>
 
-        <div className="text-center text-sm text-[#6A7B6D]">
+        <div className="text-center text-sm text-gray-600">
           {isLogin ? "Don't have an account?" : "Already have an account?"}{" "}
           <button
-            className="text-[#3EC1C9] hover:underline font-medium"
+            className="text-[#813BEA] hover:text-[#2A60EB] hover:underline font-medium"
             onClick={() => setIsLogin(!isLogin)}
           >
             {isLogin ? "Sign Up" : "Login"}
