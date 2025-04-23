@@ -17,6 +17,8 @@ const Blog = lazy(() => import('./pages/Blog'));
 const BlogPost = lazy(() => import('./pages/BlogPost'));
 const Faq =lazy (()=> import ('./components/Faq'))
 const Register = lazy (()=> import ('./pages/Register'))
+const AddCourse = lazy (()=> import ('./admin/Addcourse'))
+const AdminLog = lazy (()=> import ('./admin/Adminlog'))
 const App = () => {
   return (
     <Router>
@@ -36,6 +38,9 @@ const App = () => {
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:id" element={<BlogPost />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/admin/login" element={<AdminLog />} />
+<Route path="/admin/add-course" element={<AddCourse />} />
+
           </Routes>
         </Suspense>
       </main>

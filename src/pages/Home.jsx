@@ -12,10 +12,12 @@ const Home = () => {
   const featuredCourses = courses.courses.filter(course => course.featured).slice(0, 3);
   const stats = [
     { value: "15+", label: "Courses" },
-    { value: "500k+", label: "Students" },
+    { value: "70k+", label: "Students" },
+    { value: "3 Months", label: "Since Launch" },
     { value: "4.76", label: "Rating" }
   ];
-
+  
+  
   const handleViewCourse = (courseId) => {
     navigate(`/courses/${courseId}`);
   };
@@ -51,7 +53,7 @@ const Home = () => {
                 transition={{ duration: 0.6 }}
               >
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-                  Learn coding <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">the right way</span>
+                  Make your career <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">right now</span>
                 </h1>
                 <h2 className="text-lg sm:text-xl md:text-2xl text-blue-200 mt-2 sm:mt-4">
                   Welcome to Knowvity
@@ -68,16 +70,14 @@ const Home = () => {
                   <span className="text-white font-medium bg-blue-600/30 px-3 py-1 sm:px-4 sm:py-2 rounded-full backdrop-blur-sm flex items-center gap-1 sm:gap-2 text-sm sm:text-base">
                     <FiCode className="w-4 h-4 sm:w-5 sm:h-5" /> Learn
                   </span>
-                  <span className="text-white font-medium text-sm sm:text-base">C Programming</span>
+                  <span className="text-white font-medium text-sm sm:text-base">Coding</span>
                   <span className="text-white/50 text-sm sm:text-base">|</span>
-                  <span className="text-white/70 text-sm sm:text-base">Python</span>
-                  <span className="text-white/50 text-sm sm:text-base">|</span>
-                  <span className="text-white/70 text-sm sm:text-base">JavaScript</span>
+                  <span className="text-white/70 text-sm sm:text-base">Photography</span>
                 </div>
 
                 <p className="text-base sm:text-lg text-gray-300 max-w-2xl px-2 sm:px-0">
-                  Confused about which course to take? We've got you covered! Browse courses and discover the best option for you. 
-                  It's free! Knowvity is our effort to teach the basics and those coding techniques in a short time that took years to master.
+                  Confused about which course to take? We've got you covered! Browse courses and discover the best option for you.
+                  Knowvity is our effort to teach the Skills, Coding and those coding techniques in a short time that took years to master.
                 </p>
 
                 <div className="flex flex-wrap gap-3 sm:gap-4 justify-center lg:justify-start px-2 sm:px-0">
@@ -136,7 +136,7 @@ const Home = () => {
                     </div>
                     <div>
                       <p className="text-white font-medium text-sm sm:text-base">Join our community</p>
-                      <p className="text-gray-300 text-xs sm:text-sm">500K+ students learning together</p>
+                      <p className="text-gray-300 text-xs sm:text-sm">70K+ students learning together</p>
                     </div>
                   </div>
                 </div>
@@ -145,7 +145,7 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Floating elements for visual interest */}
+        {/* Floating elements */}
         <motion.div
           animate={{
             y: [0, -15, 0],
@@ -170,7 +170,6 @@ const Home = () => {
           className="hidden sm:block absolute bottom-1/3 right-20 w-12 h-12 rounded-full bg-blue-500/30 blur-xl"
         />
       </section>
-
       {/* Featured Courses Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -231,76 +230,89 @@ const Home = () => {
       </section>
 
       {/* Career Success Section */}
-      <section className="py-16 bg-gradient-to-br from-gray-900 to-blue-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Left Column - Stats */}
-            <div className="space-y-8">
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-              >
-                <h2 className="text-3xl font-bold mb-6">Transform Your Career</h2>
-                <div className="space-y-8">
-                  <div className="flex items-start gap-6">
-                    <div className="bg-blue-500/20 p-3 rounded-xl">
-                      <FaCheckCircle className="w-8 h-8 text-blue-400" />
-                    </div>
-                    <div>
-                      <p className="text-4xl font-bold mb-2">6 Months</p>
-                      <p className="text-gray-300">Average time to land first developer job</p>
-                    </div>
-                  </div>
+    
 
-                  <div className="flex items-start gap-6">
-                    <div className="bg-purple-500/20 p-3 rounded-xl">
-                      <FiUsers className="w-8 h-8 text-purple-400" />
-                    </div>
-                    <div>
-                      <p className="text-4xl font-bold mb-2">7M+</p>
-                      <p className="text-gray-300">Students trained worldwide</p>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
+<section className="py-16 bg-gradient-to-br from-gray-900 to-blue-900 text-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      {/* Left Column */}
+      <div className="space-y-8">
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="text-3xl font-bold mb-6">Transform Your Career</h2>
+          <div className="space-y-8">
+            <div className="flex items-start gap-6">
+              <div className="bg-blue-500/20 p-3 rounded-xl">
+                <FaCheckCircle className="w-8 h-8 text-blue-400" />
+              </div>
+              <div>
+                <p className="text-4xl font-bold mb-2">6 Months</p>
+                <p className="text-gray-300">Average time to land first developer job</p>
+              </div>
             </div>
 
-            {/* Right Column - Companies */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="bg-white/10 backdrop-blur-sm rounded-xl p-8"
-            >
-              <h3 className="text-xl font-semibold mb-6">Our Alumni Work At</h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                {[
-                  'Amazon', 'Google', 'Microsoft', 'Goldman Sachs',
-                  'PayPal', 'Samsung', 'EY', 'Hitachi',
-                  'JPMorgan', 'IBM', 'Dell', 'Deloitte'
-                ].map((company, index) => (
-                  <div 
-                    key={index}
-                    className="flex items-center justify-center p-3 bg-white/5 rounded-lg hover:bg-white/10 transition"
-                  >
-                    <img 
-                      src={`/logos/${company.toLowerCase().replace(' ', '-')}.png`}
-                      alt={company}
-                      className="h-8 object-contain grayscale hover:grayscale-0 transition"
-                    />
-                  </div>
-                ))}
-                <div className="col-span-full text-center text-gray-300 mt-4">
-                  ...and 500+ other companies worldwide
-                </div>
+            <div className="flex items-start gap-6">
+              <div className="bg-purple-500/20 p-3 rounded-xl">
+                <FiUsers className="w-8 h-8 text-purple-400" />
               </div>
+              <div>
+                <p className="text-4xl font-bold mb-2">70K+</p>
+                <p className="text-gray-300">Students learning together in just 3 months</p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Right Column */}
+      <motion.div
+        initial={{ opacity: 0, x: 20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="bg-white/10 backdrop-blur-sm rounded-xl p-8"
+      >
+        <h3 className="text-xl font-semibold mb-6">Our Alumni Work At</h3>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          {[
+            { name: 'Amazon', url: 'https://logo.clearbit.com/amazon.com' },
+            { name: 'Google', url: 'https://logo.clearbit.com/google.com' },
+            { name: 'Microsoft', url: 'https://logo.clearbit.com/microsoft.com' },
+            { name: 'PayPal', url: 'https://logo.clearbit.com/paypal.com' },
+            { name: 'Samsung', url: 'https://logo.clearbit.com/samsung.com' },
+            { name: 'JPMorgan', url: 'https://logo.clearbit.com/jpmorganchase.com' },
+            { name: 'IBM', url: 'https://logo.clearbit.com/ibm.com' },
+            { name: 'Dell', url: 'https://logo.clearbit.com/dell.com' },
+            { name: 'Deloitte', url: 'https://logo.clearbit.com/deloitte.com' }
+          ].map((company, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: index }}
+              className="flex items-center justify-center p-3 bg-white/5 rounded-lg"
+            >
+              <img
+                src={company.url}
+                alt={company.name}
+                className="h-8 object-contain"
+              />
             </motion.div>
+          ))}
+          <div className="col-span-full text-center text-gray-300 mt-4">
+            ...and 500+ other companies worldwide
           </div>
         </div>
-      </section>
+      </motion.div>
+    </div>
+  </div>
+</section>
+
+
 
       {/* Testimonials Section */}
       <section className="py-16 bg-gray-50">

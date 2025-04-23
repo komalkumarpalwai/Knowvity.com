@@ -9,35 +9,34 @@ import {
   FaInstagram, 
   FaLinkedin 
 } from 'react-icons/fa';
+
 const ContactPage = () => {
   const contactMethods = [
     {
       icon: <FiMail className="w-6 h-6 text-blue-600" />,
       title: "Email Us",
       description: "Our friendly team is here to help.",
-      details: "hello@knowvity.com",
-      link: "mailto:hello@knowvity.com"
+      details: "codemindswebservices@gmail.com",
+      link: "mailto:codemindswebservices@gmail.com"
     },
     {
       icon: <FiPhone className="w-6 h-6 text-purple-600" />,
       title: "Call Us",
       description: "Mon-Fri from 9am to 5pm.",
-      details: "+1 (555) 123-4567",
-      link: "tel:+15551234567"
+      details: "+91 93902 28526 / 81422 85266",
+      link: "tel:+919390228526"
     },
     {
       icon: <FiMapPin className="w-6 h-6 text-blue-400" />,
       title: "Visit Us",
       description: "Come say hello at our office.",
-      details: "123 Education St, San Francisco, CA",
-      link: "https://maps.google.com"
+      details: "Brindavan Colony, Ibrahimpatnam, Hyderabad",
+      link: "https://maps.google.com/?q=Brindavan+Colony,+Ibrahimpatnam,+Hyderabad"
     }
   ];
 
   return (
     <div className="flex flex-col min-h-screen">
-   
-      
       {/* Contact Hero Section */}
       <section className="relative bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -98,45 +97,45 @@ const ContactPage = () => {
 
               {/* Social Media */}
               <div className="pt-4">
-  <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-4">Follow Us</h3>
-  <div className="flex gap-4">
-    <motion.a
-      href="#"
-      whileHover={{ y: -3 }}
-      className="w-10 h-10 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center shadow-sm hover:shadow-md"
-      aria-label="Facebook"
-    >
-      <FaFacebook className="text-blue-600 dark:text-blue-400 w-5 h-5" />
-    </motion.a>
+                <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-4">Follow Us</h3>
+                <div className="flex gap-4">
+                  <motion.a
+                    href="#"
+                    whileHover={{ y: -3 }}
+                    className="w-10 h-10 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center shadow-sm hover:shadow-md"
+                    aria-label="Facebook"
+                  >
+                    <FaFacebook className="text-blue-600 dark:text-blue-400 w-5 h-5" />
+                  </motion.a>
 
-    <motion.a
-      href="#"
-      whileHover={{ y: -3 }}
-      className="w-10 h-10 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center shadow-sm hover:shadow-md"
-      aria-label="Twitter"
-    >
-      <FaTwitter className="text-blue-400 dark:text-blue-300 w-5 h-5" />
-    </motion.a>
+                  <motion.a
+                    href="#"
+                    whileHover={{ y: -3 }}
+                    className="w-10 h-10 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center shadow-sm hover:shadow-md"
+                    aria-label="Twitter"
+                  >
+                    <FaTwitter className="text-blue-400 dark:text-blue-300 w-5 h-5" />
+                  </motion.a>
 
-    <motion.a
-      href="#"
-      whileHover={{ y: -3 }}
-      className="w-10 h-10 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center shadow-sm hover:shadow-md"
-      aria-label="Instagram"
-    >
-      <FaInstagram className="text-pink-600 dark:text-pink-400 w-5 h-5" />
-    </motion.a>
+                  <motion.a
+                    href="#"
+                    whileHover={{ y: -3 }}
+                    className="w-10 h-10 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center shadow-sm hover:shadow-md"
+                    aria-label="Instagram"
+                  >
+                    <FaInstagram className="text-pink-600 dark:text-pink-400 w-5 h-5" />
+                  </motion.a>
 
-    <motion.a
-      href="#"
-      whileHover={{ y: -3 }}
-      className="w-10 h-10 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center shadow-sm hover:shadow-md"
-      aria-label="LinkedIn"
-    >
-      <FaLinkedin className="text-blue-700 dark:text-blue-500 w-5 h-5" />
-    </motion.a>
-  </div>
-</div>
+                  <motion.a
+                    href="#"
+                    whileHover={{ y: -3 }}
+                    className="w-10 h-10 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center shadow-sm hover:shadow-md"
+                    aria-label="LinkedIn"
+                  >
+                    <FaLinkedin className="text-blue-700 dark:text-blue-500 w-5 h-5" />
+                  </motion.a>
+                </div>
+              </div>
             </motion.div>
 
             {/* Contact Form */}
@@ -230,27 +229,23 @@ const ContactPage = () => {
 
       {/* Map Section */}
       <section className="bg-gray-100 dark:bg-gray-800 py-12">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">Our Location</h2>
-    <div className="rounded-xl overflow-hidden shadow-lg h-80 bg-gray-300 dark:bg-gray-700">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.258418205297!2d78.4483714153847!3d17.44860578803975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9158f201b205%3A0xad1a8b9f2b118d8a!2sHitech%20City%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
-        width="100%"
-        height="100%"
-        style={{ border: 0 }}
-        allowFullScreen=""
-        loading="lazy"
-        className="dark:grayscale dark:opacity-80"
-        title="Our Hyderabad Office Location"
-      ></iframe>
-    </div>
-    <div className="mt-4 text-center text-gray-600 dark:text-gray-300">
-      <p>2nd Floor, Tech Tower, Hitech City, Hyderabad, Telangana 500081</p>
-    </div>
-  </div>
-</section>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">Our Location</h2>
+          <div className="rounded-xl overflow-hidden shadow-lg h-80 bg-gray-300 dark:bg-gray-700">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.785578579538!2d78.66913711547447!3d17.34514930557494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc1931db836a53b%3A0x53011840c2c56856!2sBrindavan%20Colony%2C%20Ibrahimpatnam%2C%20Hyderabad!5e0!3m2!1sen!2sin!4v1650290453297!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
 
-     
+      <Footer />
     </div>
   );
 };
