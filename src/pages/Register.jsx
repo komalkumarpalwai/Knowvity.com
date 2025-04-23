@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const RegisterPage = () => {
   const [isLogin, setIsLogin] = useState(true);
@@ -9,15 +10,30 @@ const RegisterPage = () => {
     password: ""
   });
 
+  const navigate = useNavigate();
+
   const handleChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const { email, password } = formData;
+
     if (isLogin) {
-      console.log("Logging in with", formData);
+      // Trim and normalize inputs
+      if (
+        email.trim().toLowerCase() === "admin@site.com" &&
+        password.trim() === "admin123"
+      ) {
+        localStorage.setItem("isAdmin", "true");
+        alert("Login successful!");
+        navigate("/");
+      } else {
+        alert("Invalid credentials!");
+      }
     } else {
-      console.log("Signing up with", formData);
+      alert("Signup successful! Please login now.");
+      setIsLogin(true);
     }
   };
 

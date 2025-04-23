@@ -9,7 +9,7 @@ const AdminLog = () => {
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
-  const adminEmail = "admin@knowvity.com";
+  const adminEmail = "admin@site.com";
   const adminPassword = "admin123";
 
   const handleLogin = async (e) => {
