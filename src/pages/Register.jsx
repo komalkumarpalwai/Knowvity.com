@@ -17,24 +17,50 @@ const RegisterPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { email, password } = formData;
+    const { name, email, password } = formData;
+    const trimmedEmail = email.trim().toLowerCase();
+    const trimmedPassword = password.trim();
+
+    // Get existing users from localStorage
+    const users = JSON.parse(localStorage.getItem("users") || "[]");
 
     if (isLogin) {
-      // Trim and normalize inputs
-      if (
-        email.trim().toLowerCase() === "admin@site.com" &&
-        password.trim() === "admin123"
-      ) {
+      // Admin login
+      if (trimmedEmail === "admin@site.com" && trimmedPassword === "admin123") {
         localStorage.setItem("isAdmin", "true");
+        alert("Admin login successful!");
+        navigate("/admin/dashboard");
+        return;
+      }
+
+      // Regular user login
+      const user = users.find(
+        (u) => u.email === trimmedEmail && u.password === trimmedPassword
+      );
+
+      if (user) {
+        localStorage.setItem("currentUser", JSON.stringify(user));
         alert("Login successful!");
-        navigate("/");
+        navigate("/"); // or a user-specific dashboard
       } else {
         alert("Invalid credentials!");
       }
     } else {
-      alert("Signup successful! Please login now.");
+      // Signup
+      if (users.find((u) => u.email === trimmedEmail)) {
+        alert("Email already registered!");
+        return;
+      }
+
+      const newUser = { name, email: trimmedEmail, password: trimmedPassword };
+      const updatedUsers = [...users, newUser];
+      localStorage.setItem("users", JSON.stringify(updatedUsers));
+      alert("Signup successful! Please log in now.");
       setIsLogin(true);
     }
+
+    // Reset form after submission
+    setFormData({ name: "", email: "", password: "" });
   };
 
   return (
@@ -108,7 +134,10 @@ const RegisterPage = () => {
           {isLogin ? "Don't have an account?" : "Already have an account?"}{" "}
           <button
             className="text-[#813BEA] hover:text-[#2A60EB] hover:underline font-medium"
-            onClick={() => setIsLogin(!isLogin)}
+            onClick={() => {
+              setIsLogin(!isLogin);
+              setFormData({ name: "", email: "", password: "" });
+            }}
           >
             {isLogin ? "Sign Up" : "Login"}
           </button>
