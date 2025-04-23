@@ -9,7 +9,6 @@ const AdminLog = () => {
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
-  // Hardcoded credentials for demo
   const adminEmail = "admin@knowvity.com";
   const adminPassword = "admin123";
 
@@ -19,9 +18,15 @@ const AdminLog = () => {
     setIsLoading(true);
 
     try {
-      await new Promise(resolve => setTimeout(resolve, 500)); // simulate async check
+      await new Promise(resolve => setTimeout(resolve, 500));
+
+      console.log("Input Email:", email);
+      console.log("Input Password:", password);
+      console.log("Expected Email:", adminEmail);
+      console.log("Expected Password:", adminPassword);
 
       if (email === adminEmail && password === adminPassword) {
+        localStorage.setItem("isAdmin", "true");
         navigate('/admin/add-course');
       } else {
         throw new Error('Invalid admin credentials');
