@@ -26,7 +26,7 @@ const Home = () => {
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
-      (
+      
         <section className="relative h-screen bg-gradient-to-br from-[#0f172a] to-[#1e3a8a] overflow-hidden">
       {/* Glowing gradient background overlay */}
       <div className="absolute inset-0 bg-gradient-radial from-[#0ea5e9]/30 via-transparent to-transparent blur-3xl"></div>
