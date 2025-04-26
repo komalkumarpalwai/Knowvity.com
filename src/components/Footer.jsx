@@ -7,6 +7,7 @@ const Footer = () => {
     {
       title: 'Our Services',
       links: [
+        { name: 'Internships', href: '/' },
         { name: 'Ecommerce Solutions', href: '/' },
         { name: 'Website Creation', href: '/' },
         { name: 'Digital Marketing (AI)', href: '/d' },

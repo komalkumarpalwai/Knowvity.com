@@ -19,6 +19,7 @@ const Faq =lazy (()=> import ('./components/Faq'))
 const Register = lazy (()=> import ('./pages/Register'))
 const AddCourse = lazy (()=> import ('./admin/Addcourse'))
 const AdminLog = lazy (()=> import ('./admin/Adminlog'))
+const Internship = lazy(()=> import ('./pages/Internship'))
 const App = () => {
   return (
     <Router>
@@ -34,6 +35,7 @@ const App = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
+            <Route path="/Internship" element={<Internship />} />
             <Route path="/faq" element={<Faq />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:id" element={<BlogPost />} />

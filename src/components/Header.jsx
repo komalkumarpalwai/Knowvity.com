@@ -13,6 +13,7 @@ const Header = () => {
     { name: 'Courses', href: '/courses' },
     { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' },
+    { name: 'Internship', href: '/Internship' },
   ];
 
   useEffect(() => {
