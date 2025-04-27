@@ -18,10 +18,9 @@ const Home = () => {
     { value: "3 Months", label: "Since Launch", icon: <FiBookOpen className="w-6 h-6" /> },
     { value: "4.76", label: "Rating", icon: <FaCheckCircle className="w-6 h-6" /> }
   ];
-
-  const handleViewCourse = (courseId) => navigate(`/courses/${courseId}`);
-  const handleViewAllCourses = () => navigate('/courses');
-  const handleStartNow = () => navigate('/courses');
+  const handleViewCourse = (courseId) => navigate(`/courses`); 
+  const handleViewAllCourses = () => navigate('/courses'); 
+  const handleStartNow = () => navigate('/courses'); 
 
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-gray-50 to-white">
@@ -122,7 +121,8 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredCourses.map((course) => (
-              <motion.div
+       <a href="/courses">  
+            <motion.div
                 key={course.id}
                 whileHover={{ y: -10 }}
                 className="group relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden"
@@ -151,20 +151,18 @@ const Home = () => {
                   <p className="text-gray-600 line-clamp-2 mb-4">{course.shortDescription}</p>
                   
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <span className="text-2xl font-bold text-gray-900">${course.price}</span>
-                    </div>
+                   
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                       onClick={() => handleViewCourse(course.id)}
                     >
-                      Enroll Now
+                   Enroll Now 
                       <FiChevronRight className="w-4 h-4" />
                     </motion.button>
                   </div>
                 </div>
-              </motion.div>
+              </motion.div> </a>
             ))}
           </div>
         </div>

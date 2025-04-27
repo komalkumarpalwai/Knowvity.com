@@ -33,14 +33,7 @@ const Header = () => {
         <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
           {/* Brand */}
           <motion.div whileHover={{ scale: 1.05 }} className="flex items-center gap-3">
-            <motion.svg
-              className="w-8 h-8 text-blue-600"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-            </motion.svg>
+          
             <a href="/" className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               Knowvity
             </a>

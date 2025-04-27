@@ -39,7 +39,7 @@ const CoursesPage = () => {
               <input
                 type="text"
                 placeholder="Search courses..."
-                className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-[#3EC1C9] focus:border-transparent"
+                className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
@@ -49,7 +49,7 @@ const CoursesPage = () => {
                 <FiFilter className="h-5 w-5 text-[#6A7B6D]" />
               </div>
               <select
-                className="appearance-none block pl-10 pr-10 py-3 border border-gray-300 rounded-lg bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-[#3EC1C9] focus:border-transparent"
+                className="appearance-none block pl-10 pr-10 py-3 border border-gray-300 rounded-lg bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
               >
@@ -80,8 +80,10 @@ const CoursesPage = () => {
                 />
                 <div className="p-6">
                   <div className="flex justify-between items-start mb-2">
-                    <span className="inline-block px-3 py-1 bg-[#3EC1C9]/20 text-[#3EC1C9] text-xs font-medium rounded-full">
-                      {course.category}
+                    <span className="inline-block px-3 py-1 bg-blue-400/20 rounded-full">
+                      <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent text-xs font-medium">
+                        {course.category}
+                      </span>
                     </span>
                     <span className="flex items-center text-yellow-500">
                       <span className="font-bold">{course.rating}</span>
@@ -91,7 +93,15 @@ const CoursesPage = () => {
                   <h3 className="text-xl font-semibold text-[#353535] mb-2">{course.title}</h3>
                   <p className="text-[#6A7B6D] text-sm mb-4">{course.shortDescription}</p>
                   <div className="flex justify-between items-center">
-                    <span className="text-lg font-bold text-[#353535]">${course.price}</span>
+                    <button
+                      className="bg-gradient-to-r from-blue-400 to-purple-400 text-white px-4 py-2 rounded-md text-sm font-medium hover:opacity-90 transition-opacity"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleCourseClick(course.id);
+                      }}
+                    >
+                     Explore the Course Details
+                    </button>
                     <span className="text-sm text-[#6A7B6D]">{course.duration}</span>
                   </div>
                 </div>

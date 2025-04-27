@@ -60,54 +60,17 @@ const InternshipPage = () => {
             whileHover={{ scale: 1.02 }}
             className="inline-block bg-gradient-to-r from-blue-500 to-purple-600 p-[2px] rounded-full"
           >
-            <button className="bg-gray-900 px-12 py-3.5 rounded-full font-medium hover:bg-gray-900/90 transition-all">
+    <a href="/courses">       <button className="bg-gray-900 px-12 py-3.5 rounded-full font-medium hover:bg-gray-900/90 transition-all">
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 Join Elite Coders
               </span>
-            </button>
+            </button></a> 
           </motion.div>
         </div>
       </section>
 
       {/* Tracks Section */}
-      <section className="py-20 bg-gray-800/30">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-16">Premium Learning Tracks</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {Object.entries(tracks).map(([key, track]) => (
-              <motion.div 
-                key={key}
-                whileHover={{ y: -10 }}
-                className="bg-gray-800/50 border border-gray-700 rounded-2xl p-8 hover:border-blue-400/30 transition-all"
-              >
-                <div className="mb-6 text-blue-400">{track.icon}</div>
-                <h3 className="text-2xl font-bold mb-4">{track.title}</h3>
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="flex items-center gap-2 text-purple-400">
-                    <FaRegClock />
-                    <span>{track.duration}</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-blue-400">
-                    <FaCertificate />
-                    <span>{track.projects} Projects</span>
-                  </div>
-                </div>
-                <div className="grid grid-cols-2 gap-2 mb-6">
-                  {track.tech.map((tech, i) => (
-                    <div key={i} className="bg-gray-700/30 px-3 py-1.5 rounded-md text-sm">
-                      {tech}
-                    </div>
-                  ))}
-                </div>
-                <button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 py-3 rounded-lg font-medium hover:shadow-lg hover:shadow-blue-500/20">
-                  Enroll Now
-                </button>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+    
 
       {/* Pricing Section */}
       <section className="py-20 bg-gray-900">
@@ -124,16 +87,16 @@ const InternshipPage = () => {
               </div>
               <h3 className="text-2xl font-bold mb-4">3 Months Immersive</h3>
               <div className="text-4xl font-bold mb-4">
-                ₹199<span className="text-xl text-gray-400">/month</span>
+                ₹249<span className="text-xl text-gray-400">/month</span>
               </div>
               <ul className="space-y-3 mb-6">
                 <li className="flex items-center gap-3"><FaChalkboardTeacher /> Daily 1:1 Mentorship</li>
                 <li className="flex items-center gap-3"><FaUserGraduate /> Career Coaching</li>
                 <li className="flex items-center gap-3"><FaCertificate /> Industry Certifications</li>
               </ul>
-              <button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 py-3.5 rounded-lg font-medium">
+          <a href="/courses">   <button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 py-3.5 rounded-lg font-medium">
                 Start Premium Journey
-              </button>
+              </button></a> 
             </motion.div>
 
             <motion.div 
@@ -142,16 +105,16 @@ const InternshipPage = () => {
             >
               <h3 className="text-2xl font-bold mb-4">2 Months Intensive</h3>
               <div className="text-4xl font-bold mb-4">
-                ₹299<span className="text-xl text-gray-400">/month</span>
+                ₹149<span className="text-xl text-gray-400">/month</span>
               </div>
               <ul className="space-y-3 mb-6">
                 <li className="flex items-center gap-3"><FaChalkboardTeacher /> Weekly Mentorship</li>
                 <li className="flex items-center gap-3"><FaUserGraduate /> Resume Building</li>
                 <li className="flex items-center gap-3"><FaCertificate /> Project Certificates</li>
               </ul>
-              <button className="w-full bg-gradient-to-r from-purple-500 to-blue-600 py-3.5 rounded-lg font-medium">
-                Accelerate Your Career
-              </button>
+              <a href="/courses">   <button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 py-3.5 rounded-lg font-medium">
+                Start Premium Journey
+              </button></a> 
             </motion.div>
           </div>
         </div>
