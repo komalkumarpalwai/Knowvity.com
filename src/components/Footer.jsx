@@ -1,4 +1,4 @@
-import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaEnvelope, FaMobileAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import React from 'react';
 
@@ -45,12 +45,16 @@ const Footer = () => {
           <p className="text-gray-400">Srinivas Rao - Founder</p>
           <div className="space-y-2">
             <div className="flex items-center gap-2">
-              <FaPhone className="text-blue-400" />
-              <span>93902 28526 / 81422 85266</span>
+              <FaMobileAlt className="text-blue-400" />
+              <a href="tel:+919390228526" className="hover:text-blue-400">
+                93902 28526 / 81422 85266
+              </a>
             </div>
             <div className="flex items-center gap-2">
               <FaEnvelope className="text-blue-400" />
-              <span>codemindswebservices@gmail.com</span>
+              <a href="mailto:codemindswebservices@gmail.com" className="hover:text-blue-400">
+                codemindswebservices@gmail.com
+              </a>
             </div>
             <div className="flex items-start gap-2">
               <FaMapMarkerAlt className="text-blue-400 mt-1" />

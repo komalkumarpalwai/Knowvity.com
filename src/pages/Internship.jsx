@@ -105,7 +105,7 @@ const InternshipPage = () => {
             >
               <h3 className="text-2xl font-bold mb-4">2 Months Intensive</h3>
               <div className="text-4xl font-bold mb-4">
-                ₹149<span className="text-xl text-gray-400">/month</span>
+                ₹199<span className="text-xl text-gray-400">/month</span>
               </div>
               <ul className="space-y-3 mb-6">
                 <li className="flex items-center gap-3"><FaChalkboardTeacher /> Weekly Mentorship</li>
