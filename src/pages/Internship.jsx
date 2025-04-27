@@ -73,52 +73,66 @@ const InternshipPage = () => {
     
 
       {/* Pricing Section */}
-      <section className="py-20 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-16">Exclusive Pricing</h2>
-          
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <motion.div 
-              whileHover={{ scale: 1.02 }}
-              className="relative bg-gray-800 border-2 border-blue-400/20 rounded-2xl p-8"
-            >
-              <div className="absolute top-0 right-0 bg-blue-500 text-white px-4 py-1 rounded-bl-xl">
-                Most Popular
-              </div>
-              <h3 className="text-2xl font-bold mb-4">3 Months Immersive</h3>
-              <div className="text-4xl font-bold mb-4">
-                ₹249<span className="text-xl text-gray-400">/month</span>
-              </div>
-              <ul className="space-y-3 mb-6">
-                <li className="flex items-center gap-3"><FaChalkboardTeacher /> Daily 1:1 Mentorship</li>
-                <li className="flex items-center gap-3"><FaUserGraduate /> Career Coaching</li>
-                <li className="flex items-center gap-3"><FaCertificate /> Industry Certifications</li>
-              </ul>
-          <a href="/courses">   <button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 py-3.5 rounded-lg font-medium">
-                Start Premium Journey
-              </button></a> 
-            </motion.div>
+    {/* Pricing Section */}
+<section className="py-20 bg-gray-900">
+  <div className="max-w-7xl mx-auto px-6">
+    <h2 className="text-4xl font-bold text-center mb-16">Exclusive Pricing</h2>
 
-            <motion.div 
-              whileHover={{ scale: 1.02 }}
-              className="bg-gray-800 border-2 border-purple-400/20 rounded-2xl p-8"
-            >
-              <h3 className="text-2xl font-bold mb-4">2 Months Intensive</h3>
-              <div className="text-4xl font-bold mb-4">
-                ₹199<span className="text-xl text-gray-400">/month</span>
-              </div>
-              <ul className="space-y-3 mb-6">
-                <li className="flex items-center gap-3"><FaChalkboardTeacher /> Weekly Mentorship</li>
-                <li className="flex items-center gap-3"><FaUserGraduate /> Resume Building</li>
-                <li className="flex items-center gap-3"><FaCertificate /> Project Certificates</li>
-              </ul>
-              <a href="/courses">   <button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 py-3.5 rounded-lg font-medium">
-                Start Premium Journey
-              </button></a> 
-            </motion.div>
-          </div>
+    <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+      {/* 3 Months Card */}
+      <motion.div 
+        whileHover={{ scale: 1.02 }}
+        className="relative bg-gray-800 border-2 border-blue-400/20 rounded-2xl p-8"
+      >
+        <div className="absolute top-0 right-0 bg-blue-500 text-white px-4 py-1 rounded-bl-xl">
+          Most Popular
         </div>
-      </section>
+        <h3 className="text-2xl font-bold mb-4">3 Months Immersive</h3>
+        <div className="text-4xl font-bold mb-4">
+          ₹249<span className="text-xl text-gray-400">/month</span>
+        </div>
+        <ul className="space-y-3 mb-6">
+          <li className="flex items-center gap-3"><FaChalkboardTeacher /> Daily 1:1 Mentorship</li>
+          <li className="flex items-center gap-3"><FaUserGraduate /> Career Coaching</li>
+          <li className="flex items-center gap-3"><FaCertificate /> Industry Certifications</li>
+          <li className="flex items-center gap-3"><FaCode /> 6 Live Projects</li>
+          <li className="flex items-center gap-3"><FaCertificate /> Letter of Recommendation</li>
+          <li className="flex items-center gap-3"><FaCertificate /> Experience Letter</li>
+        </ul>
+        <a href="/courses">
+          <button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 py-3.5 rounded-lg font-medium">
+            Start Premium Journey
+          </button>
+        </a>
+      </motion.div>
+
+      {/* 2 Months Card */}
+      <motion.div 
+        whileHover={{ scale: 1.02 }}
+        className="bg-gray-800 border-2 border-purple-400/20 rounded-2xl p-8"
+      >
+        <h3 className="text-2xl font-bold mb-4">2 Months Intensive</h3>
+        <div className="text-4xl font-bold mb-4">
+          ₹199<span className="text-xl text-gray-400">/month</span>
+        </div>
+        <ul className="space-y-3 mb-6">
+          <li className="flex items-center gap-3"><FaChalkboardTeacher /> Weekly Mentorship</li>
+          <li className="flex items-center gap-3"><FaUserGraduate /> Resume Building</li>
+          <li className="flex items-center gap-3"><FaCertificate /> Project Certificates</li>
+          <li className="flex items-center gap-3"><FaCode /> 4 Live Projects</li>
+          <li className="flex items-center gap-3"><FaCertificate /> Letter of Recommendation</li>
+          <li className="flex items-center gap-3"><FaCertificate /> Experience Letter</li>
+        </ul>
+        <a href="/courses">
+          <button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 py-3.5 rounded-lg font-medium">
+            Start Premium Journey
+          </button>
+        </a>
+      </motion.div>
+    </div>
+  </div>
+</section>
+
 
       {/* Curriculum Section */}
       <section className="py-20 bg-gray-800/30">
