@@ -27,83 +27,83 @@ const Home = () => {
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
       
-        <section className="relative h-screen bg-gradient-to-br from-[#0f172a] to-[#1e3a8a] overflow-hidden">
-      {/* Glowing gradient background overlay */}
-      <div className="absolute inset-0 bg-gradient-radial from-[#0ea5e9]/30 via-transparent to-transparent blur-3xl"></div>
+      <section className="relative min-h-screen bg-gradient-to-br from-[#0f172a] to-[#1e3a8a] overflow-hidden flex items-center">
+  {/* Background elements remain the same */}
+  <div className="absolute inset-0 bg-gradient-radial from-[#0ea5e9]/30 via-transparent to-transparent blur-3xl"></div>
+  <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-5 mix-blend-soft-light z-0" />
 
-      {/* Sparkling particles */}
-      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-5 mix-blend-soft-light z-0" />
+  <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-32">
+    <div className="flex flex-col items-center text-center">
+      {/* Glow ring */}
+      <motion.div
+        initial={{ scale: 0.8, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 1.2 }}
+        className="mb-3 sm:mb-4"
+      >
+        <span className="inline-flex items-center px-4 py-1.5 sm:px-6 sm:py-2 bg-white/10 backdrop-blur-sm rounded-full text-sky-300 font-medium shadow-lg text-sm sm:text-base">
+          <FiCode className="mr-2 w-4 h-4 sm:w-5 sm:h-5" />
+          Learn Future Skills
+        </span>
+      </motion.div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 py-32 flex flex-col items-center text-center">
-        {/* Glow ring */}
-        <motion.div
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1.2 }}
-          className="mb-4"
+      {/* Gradient headline */}
+      <motion.h1
+        initial={{ y: 40, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tighter sm:tracking-tight bg-gradient-to-r from-sky-400 to-indigo-300 text-transparent bg-clip-text drop-shadow-md px-4"
+      >
+        Make Your Career Right Now
+      </motion.h1>
+
+      {/* Type animation */}
+      <TypeAnimation
+        sequence={[
+          'Coding', 1000,
+          'Design', 1000,
+          'Photography', 1000,
+          'Marketing', 1000,
+        ]}
+        speed={50}
+        repeat={Infinity}
+        className="text-lg sm:text-xl text-blue-100 mt-3 sm:mt-4 tracking-wide"
+      />
+
+      {/* Description */}
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.4 }}
+        className="text-base sm:text-lg text-blue-200 mt-4 sm:mt-6 max-w-2xl px-4 sm:px-0"
+      >
+        Confused about which course to take? We’ve got you covered! Browse courses and discover the best option for you. Knowvity is our effort to teach skills, coding, and those techniques in a short time that took years to master.
+      </motion.p>
+
+      {/* Buttons */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.7 }}
+        className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-8 sm:mt-10 w-full sm:w-auto px-4 sm:px-0"
+      >
+        <button
+          onClick={() => navigate('/courses')}
+          className="w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-sky-500 to-indigo-600 text-white rounded-xl shadow-md font-semibold hover:scale-105 transition-transform text-sm sm:text-base"
         >
-          <span className="inline-flex items-center px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sky-300 font-medium shadow-lg text-sm">
-            <FiCode className="mr-2" />
-            Learn Future Skills
-          </span>
-        </motion.div>
+          Explore Courses <FiArrowRight className="inline ml-2 w-4 h-4 sm:w-5 sm:h-5" />
+        </button>
 
-        {/* Gradient headline */}
-        <motion.h1
-          initial={{ y: 40, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1 }}
-          className="text-5xl sm:text-6xl font-extrabold tracking-tight bg-gradient-to-r from-sky-400 to-indigo-300 text-transparent bg-clip-text drop-shadow-md"
+        <button
+          onClick={() => navigate('/contact')}
+          className="w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 border border-white/20 text-white rounded-xl backdrop-blur hover:bg-white/10 transition text-sm sm:text-base"
         >
-          Make Your Career Right Now
-        </motion.h1>
-
-        {/* Type animation */}
-        <TypeAnimation
-          sequence={[
-            'Coding', 1000,
-            'Design', 1000,
-            'Photography', 1000,
-            'Marketing', 1000,
-          ]}
-          speed={50}
-          repeat={Infinity}
-          className="text-xl text-blue-100 mt-4 tracking-wide"
-        />
-
-        {/* Description */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.4 }}
-          className="text-lg text-blue-200 mt-6 max-w-2xl"
-        >
-          Confused about which course to take? We’ve got you covered! Browse courses and discover the best option for you. Knowvity is our effort to teach skills, coding, and those techniques in a short time that took years to master.
-        </motion.p>
-
-        {/* Buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.7 }}
-          className="flex flex-col sm:flex-row gap-4 mt-10"
-        >
-          <button
-            onClick={() => navigate('/courses')}
-            className="px-8 py-4 bg-gradient-to-r from-sky-500 to-indigo-600 text-white rounded-xl shadow-md font-semibold hover:scale-105 transition-transform"
-          >
-            Explore Courses <FiArrowRight className="inline ml-2" />
-          </button>
-
-          <button
-            onClick={() => navigate('/contact')}
-            className="px-8 py-4 border border-white/20 text-white rounded-xl backdrop-blur hover:bg-white/10 transition"
-          >
-            Get in Touch
-          </button>
-        </motion.div>
-      </div>
-    </section>
+          Get in Touch
+        </button>
+      </motion.div>
+    </div>
+  </div>
+</section>
 
       {/* Featured Courses Section */}
       <section className="py-20 bg-white">
