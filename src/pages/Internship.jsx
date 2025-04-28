@@ -92,12 +92,11 @@ const InternshipPage = () => {
           ₹249<span className="text-xl text-gray-400">/month</span>
         </div>
         <ul className="space-y-3 mb-6">
-          <li className="flex items-center gap-3"><FaChalkboardTeacher /> Daily 1:1 Mentorship</li>
-          <li className="flex items-center gap-3"><FaUserGraduate /> Career Coaching</li>
-          <li className="flex items-center gap-3"><FaCertificate /> Industry Certifications</li>
+         
           <li className="flex items-center gap-3"><FaCode /> 6 Live Projects</li>
           <li className="flex items-center gap-3"><FaCertificate /> Letter of Recommendation</li>
           <li className="flex items-center gap-3"><FaCertificate /> Experience Letter</li>
+          <li className="flex items-center gap-3"><FaUserGraduate /> Resume Building</li>
         </ul>
         <a href="/courses">
           <button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 py-3.5 rounded-lg font-medium">
@@ -116,12 +115,12 @@ const InternshipPage = () => {
           ₹199<span className="text-xl text-gray-400">/month</span>
         </div>
         <ul className="space-y-3 mb-6">
-          <li className="flex items-center gap-3"><FaChalkboardTeacher /> Weekly Mentorship</li>
-          <li className="flex items-center gap-3"><FaUserGraduate /> Resume Building</li>
-          <li className="flex items-center gap-3"><FaCertificate /> Project Certificates</li>
+        
+         
+        
           <li className="flex items-center gap-3"><FaCode /> 4 Live Projects</li>
           <li className="flex items-center gap-3"><FaCertificate /> Letter of Recommendation</li>
-          <li className="flex items-center gap-3"><FaCertificate /> Experience Letter</li>
+          <li className="flex items-center gap-3"><FaCertificate /> Experience Letter</li> <li className="flex items-center gap-3"><FaUserGraduate /> Resume Building</li>
         </ul>
         <a href="/courses">
           <button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 py-3.5 rounded-lg font-medium">
