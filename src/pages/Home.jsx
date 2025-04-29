@@ -268,13 +268,13 @@ const Home = () => {
               </p>
               <div className="flex items-center">
                 <img 
-                  src="https://randomuser.me/api/portraits/men/32.jpg" 
+                  src="https://img.freepik.com/premium-photo/student-photo_403587-286.jpg?w=826" 
                   alt="Mohit Kumar"
                   className="w-12 h-12 rounded-full mr-4"
                 />
                 <div>
                   <h4 className="font-semibold text-gray-900">Mohit Kumar</h4>
-                  <p className="text-gray-600">Frontend Developer @Amazon</p>
+                  <p className="text-gray-600">Frontend Developer </p>
                 </div>
               </div>
             </motion.div>
@@ -296,13 +296,12 @@ const Home = () => {
               </p>
               <div className="flex items-center">
                 <img 
-                  src="https://randomuser.me/api/portraits/women/45.jpg" 
-                  alt="Priya Sharma"
+                  src="https://img.freepik.com/premium-photo/young-indian-college-student-girl-happy-after-admission_437792-782.jpg?w=360"
                   className="w-12 h-12 rounded-full mr-4"
                 />
                 <div>
                   <h4 className="font-semibold text-gray-900">Priya Sharma</h4>
-                  <p className="text-gray-600">Full Stack Developer @Google</p>
+                  <p className="text-gray-600">Full Stack Developer </p>
                 </div>
               </div>
             </motion.div>
